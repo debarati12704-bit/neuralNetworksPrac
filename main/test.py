@@ -27,3 +27,14 @@ model = Perceptron(learning_rate=0.1, epochs=100)
 model.fit(X, y_xor)
 
 print("Predict XOR:",model.predict(X))
+
+#use MLP for XOR
+from mlp import mlpclassifier
+
+model1=mlpclassifier()
+model1.fit(X,y_xor)
+prediction=model1.predict(X)
+print(
+    "\n predicted:", prediction,
+    "\n Actual:", y_xor
+)
